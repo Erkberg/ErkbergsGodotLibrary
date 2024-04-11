@@ -1,18 +1,37 @@
-[gd_scene load_steps=3 format=3 uid="uid://b4y10m6nrogxu"]
+[gd_scene load_steps=7 format=3 uid="uid://b4y10m6nrogxu"]
 
 [ext_resource type="Script" path="res://GodotLibrary/Util/Shake3D.cs" id="1_ba3xs"]
+[ext_resource type="PackedScene" uid="uid://cuxt7pk3a6e07" path="res://GodotLibrary/Movement/FirstPersonCharacter3D.tscn" id="2_4nk5x"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_g3qbk"]
 
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_jvn0s"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_t8syl"]
+noise = SubResource("FastNoiseLite_jvn0s")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4m7d5"]
+albedo_texture = SubResource("NoiseTexture2D_t8syl")
+
 [node name="Examples3D" type="Node3D"]
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 4, 6)
+[node name="Sun" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
 
 [node name="ShakeSphere" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 mesh = SubResource("SphereMesh_g3qbk")
 script = ExtResource("1_ba3xs")
 duration = 4.0
 dimensions = Vector3(1, 0, 4)
 diminishingMagnitude = true
 shakeOnReady = true
+
+[node name="FirstPersonCharacter3D" parent="." instance=ExtResource("2_4nk5x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 4)
+
+[node name="Ground" type="CSGBox3D" parent="."]
+material_override = SubResource("StandardMaterial3D_4m7d5")
+use_collision = true
+size = Vector3(16, 0.01, 16)
