@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4y10m6nrogxu"]
+
+[ext_resource type="Script" path="res://GodotLibrary/Util/Shake3D.cs" id="1_ba3xs"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_g3qbk"]
+
+[node name="Examples3D" type="Node3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 4, 6)
+
+[node name="ShakeSphere" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_g3qbk")
+script = ExtResource("1_ba3xs")
+duration = 4.0
+dimensions = Vector3(1, 0, 4)
+diminishingMagnitude = true
+shakeOnReady = true
