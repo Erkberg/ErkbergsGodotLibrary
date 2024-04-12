@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="64.516083mm"
+   height="64.517769mm"
+   viewBox="0 0 64.516083 64.517769"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   sodipodi:docname="Diamond.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.0381216"
+     inkscape:cx="308.73068"
+     inkscape:cy="256.71365"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     width="64mm"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-4.9966516,3.8349)">
+    <path
+       sodipodi:type="star"
+       style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:16"
+       id="path1209"
+       inkscape:flatsided="false"
+       sodipodi:sides="2"
+       sodipodi:cx="121.49093"
+       sodipodi:cy="122.17207"
+       sodipodi:r1="110.61092"
+       sodipodi:r2="110.61092"
+       sodipodi:arg1="-1.566442"
+       sodipodi:arg2="0.0087469834"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="M 121.97256,11.562198 232.09762,123.13957 121.00929,232.78195 10.884236,121.20457 Z"
+       transform="matrix(0.26458333,0,0,0.26458333,5.1102186,-3.9007105)" />
+  </g>
+</svg>
