@@ -5,7 +5,7 @@ namespace ErkbergsGodotLibrary
 {
     public partial class PrintExample : Node3D
     {
-        public override void _Ready()
+        public override async void _Ready()
         {
             // Simple
             GD.Print("Hi there!");
@@ -24,7 +24,12 @@ namespace ErkbergsGodotLibrary
             GD.PrintRich("[b]Bold[/b] ", "[i]Italic[/i] ", "[b][i]Bold Italic[/i][/b]");
             // more examples
 
+            // print_debug is not available in C#
+            GD.Print(System.Environment.StackTrace);
+
             // Warnings & Errors
+            GD.PushWarning("This is a warning");
+            GD.PushError("This is an error");
         }
     }
 }
