@@ -6,10 +6,10 @@ public partial class HealthComponent : Node
     [Export] public float MaxHealth { get; set; } = 1;
     [Export] public float CurrentHealth { get; set; } = 1;
 
-    public Action Died;
-    public Action HealthChanged;
-    public Action HealthIncreased;
-    public Action HealthDecreased;
+    public event Action Died;
+    public event Action HealthChanged;
+    public event Action HealthIncreased;
+    public event Action HealthDecreased;
 
     public void Damage(float amount)
     {
