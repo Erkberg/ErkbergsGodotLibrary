@@ -13,14 +13,15 @@ public partial class HealthComponent : Node
 
     public void Damage(float amount)
     {
-        if (CurrentHealth > 0)
+        float previousHealth = CurrentHealth;
+        CurrentHealth -= amount;
+        ClampCurrentHealth();
+
+        if (CurrentHealth != previousHealth)
         {
             HealthDecreased?.Invoke();
             HealthChanged?.Invoke();
         }
-
-        CurrentHealth -= amount;
-        ClampCurrentHealth();
 
         if (CurrentHealth <= 0)
         {
@@ -30,14 +31,16 @@ public partial class HealthComponent : Node
 
     public void Heal(float amount)
     {
-        if (CurrentHealth < MaxHealth)
+        float previousHealth = CurrentHealth;
+
+        CurrentHealth += amount;
+        ClampCurrentHealth();
+
+        if (CurrentHealth != previousHealth)
         {
             HealthIncreased?.Invoke();
             HealthChanged?.Invoke();
         }
-
-        CurrentHealth += amount;
-        ClampCurrentHealth();
     }
 
     public float GetHealthPercentage()
