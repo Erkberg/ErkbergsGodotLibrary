@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c60547nd4puhg"
-path="res://.godot/imported/Diamond.svg-587ded9e836516f90c9659f86345df87.ctex"
+path="res://.godot/imported/Diamond.svg-ff454a73701d99fb39b1d494816f1ae2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://GodotLibrary/Textures/Diamond.svg"
-dest_files=["res://.godot/imported/Diamond.svg-587ded9e836516f90c9659f86345df87.ctex"]
+source_file="res://addons/ErkbergsGodotLibrary/Textures/Diamond.svg"
+dest_files=["res://.godot/imported/Diamond.svg-ff454a73701d99fb39b1d494816f1ae2.ctex"]
 
 [params]
 
