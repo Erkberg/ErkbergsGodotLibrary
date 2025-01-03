@@ -14,6 +14,11 @@ namespace ErkbergsGodotLibrary
             return new Vector3(x, y, z);
         }
 
+        public static Vector3 GetRandomSpawnPosition3D(Vector2 spawnBounds)
+        {
+            return GetRandomSpawnPosition3D(spawnBounds.X, spawnBounds.Y);
+        }
+
         public static Vector3 GetRandomSpawnPosition3D(float spawnX, float spawnZ, float spawnY = 0f)
         {
             Vector3 spawnPosi = Vector3.Zero;
